@@ -34,3 +34,57 @@ You will teach yourself a new server side language/web framework and build a RES
   - [ ] Create a repo, push to Github, and submit to learn
 
 [CJ's tips](https://gist.github.com/w3cj/de4982a126ea52b3df326660a240ad7e)
+
+# Build a Server with Ruby on Rails
+
+Install Ruby Version Manager (RVM)
+*RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.*
+```
+$ \curl -sSL https://get.rvm.io | bash -s stable
+```
+**Ruby will automatically use bash to store the configuration information.**
+If you are using Zsh or anything other than Bash, copy and paste the information from the bash.rc and bash-profile into the zsh.rc
+
+Load RVM into your shell sessions as a function
+```
+$ source ~/.rvm/scripts/rvm
+
+$ rvm user gemsets
+```
+
+Test - should return rvm is a function
+```
+$ type rvm | head -n 1
+```
+
+Install [Ruby](https://rubygems.org/)
+```
+$ rvm install 2.1.1
+```
+or, install latest stable version of ruby
+```
+rvm install ruby --latest
+```
+
+Install [Rails](http://guides.rubyonrails.org/getting_started.html)
+```
+gem install rails -v 4.1.8
+```
+to test the version
+```
+rails -v
+```
+
+Install [Bundler](http://bundler.io/)
+```
+gem install bundler
+```
+
+*if you run $ bundle and get:*
+```
+Can't install RMagick 0.0.0. Can't find Magick-config . . .
+```
+ install the Image Magick dependency
+ ```
+ brew install imagemagick
+ ```
