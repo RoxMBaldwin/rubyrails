@@ -5,15 +5,15 @@ You will teach yourself a new server side language/web framework and build a RES
 
 * - [x] Choose your language: **Ruby**, framework: **Rails**
 
-- [...] **Write/Compile/Run Hello World in a new Language**
+- [x] **Write/Compile/Run Hello World in a new Language**
 
 - [ ] **Implement a RESTful CRUD JSON API in a new Language**
 
 ## Steps to CRUD in a new Language / Framework
 - [x] Choose a Language (Any server side language except JavaScript)
 
-  - [...] Setup Development Environment
-  - [...] Write / Compile / Run Hello World
+  - [x] Setup Development Environment
+  - [x] Write / Compile / Run Hello World
 
 - [x] Choose a Server Side Web Framework
   * [Web Application Frameworks](https://github.com/showcases/web-application-frameworks?s=stars)
@@ -98,29 +98,42 @@ $ gem install bundler
  [Building Your First Rails App](https://www.sitepoint.com/building-your-first-rails-application-models/)
 
 # Structure of a Rails Application
+There are a few commands that are critical to using Rails:
+```
+rails console
+rails server
+rake
+rails generate
+rails dbconsole
+rails new app_name
+```
 
 You can see all of the command line options that the Rails application builder accepts by running:
 ```
 $ rails new -h.
 ```
 
-## [Blog](http://guides.rubyonrails.org/getting_started.html) Application Example
+## foreignLanguage Application [Example](http://guides.rubyonrails.org/getting_started.html)
 
 **Creating the App:**
 
 Rails comes with a number of scripts called generators that are designed to make your development life easier by creating everything that's necessary to start working on a particular task. One of these is the new application generator, which will provide you with the foundation of a fresh Rails application so that you don't have to write it yourself.
 
+![rails-new-description](images/rails-new-description.png)
+
+
 ```
-$ rails new blog
+$ rails new foreignLanguage
 ```
-This will create a Rails application called Blog in a blog directory and install the gem dependencies that are already mentioned in Gemfile using bundle install.
+
+This will create a Rails application called foreignLanguage in a blog directory and install the gem dependencies that are already mentioned in Gemfile using bundle install.
 
 After you create the blog app, switch into its folder:
 ```
-$ cd blog
+$ cd foreignLanguage
 ```
 
-The blog directory has a number of auto-generated files and folders that make up the structure of a Rails application.
+The foreignLanguage directory has a number of auto-generated files and folders that make up the structure of a Rails application.
 
 
 ![auto-generated-files/folders](images/rails-auto-files:folders.png)
@@ -128,7 +141,7 @@ The blog directory has a number of auto-generated files and folders that make up
 
 **Starting up the Server:**
 
-Run the following in the blog directory:
+Run the following in the foreignLanguage directory:
 ```
 $ bin/rails server
 ```
@@ -155,7 +168,7 @@ To create a new controller:
  $ bin/rails generate controller Welcome index
  ```
 
- * Rails will create several files and a route
+ * Rails will create several files and a route within the foreignLanguage directory:
  ```
  create  app/controllers/welcome_controller.rb
  route  get 'welcome/index'
@@ -182,9 +195,7 @@ create      app/assets/stylesheets/welcome.scss
 ```
 
 **Setting the Application's Home Page**
-After the controller and view are established, we need to tell Rails when we want "Hello World!" to display at the root URL of our site, http://localhost:3000. At the moment, "Welcome aboard" is occupying that spot.
-
-![default-rails](images/default.png)
+After the controller and view are established, we need to tell Rails when we want "Hello World!" to display at the root URL of our site, http://localhost:3000. At the moment, "Yay! You're on Rails!" is occupying that spot.
 
 You have to tell Rails where your actual home page is located.
 * Open the file config/routes.rb in your editor:
@@ -207,3 +218,5 @@ end
 [This was created earlier when you ran the controller generator (bin/rails generate controller Welcome index).]
 
 Navigate to http://localhost:3000 in your browser. You'll see the "Hello, World!" message you put into app/views/welcome/index.html.erb, indicating that this new route is indeed going to WelcomeController's index action and is rendering the view correctly.
+
+![hello-world-connected](images/hello-world-connected.png)
