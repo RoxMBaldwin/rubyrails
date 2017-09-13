@@ -90,6 +90,7 @@ $ gem install bundler
  ```
 
  Setup Resources:
+
  [Rails Install](https://gist.github.com/berto/f4ac7d47d48c568490c8)
 
  [RVM CLI Usage](http://rvm.io/rvm/cli)
@@ -140,7 +141,7 @@ open a browser window and navigate to http://localhost:3000
 
 To stop running the server, just use Ctrl C.
 
-**'Hello World'**
+**'Hello World':**
 
 Create at minimum a controller and a view:
   * A controller's purpose is to receive specific requests for the application. Routing decides which controller receives which requests. Often, there is more than one route to each controller, and different routes can be served by different actions. Each action's purpose is to collect information to provide it to a view. It is the controller, not the view, where information is collected.
@@ -182,6 +183,8 @@ create      app/assets/stylesheets/welcome.scss
 
 **Setting the Application's Home Page**
 After the controller and view are established, we need to tell Rails when we want "Hello World!" to display at the root URL of our site, http://localhost:3000. At the moment, "Welcome aboard" is occupying that spot.
+
+![default-rails](images/default.png)
 
 You have to tell Rails where your actual home page is located.
 * Open the file config/routes.rb in your editor:
